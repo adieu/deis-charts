@@ -22,7 +22,7 @@ spec:
       serviceAccount: deis-router
       containers:
       - name: deis-router
-        image: quay.io/{{.router.org}}/router:{{env "ROUTER_GIT_TAG" | default .router.dockerTag}}
+        image: registry.cn-hangzhou.aliyuncs.com/{{.router.org}}/deis-router:{{env "ROUTER_GIT_TAG" | default .router.dockerTag}}
         imagePullPolicy: {{.router.pullPolicy}}
         env:
         - name: POD_NAMESPACE

@@ -40,7 +40,7 @@ logger_redis_location = "on-cluster"
 #
 # Valid values are:
 # - on-cluster: Run registry within the Kubernetes cluster
-# - off-cluster: Use registry outside the Kubernetes cluster (example: dockerhub,quay.io,self-hosted)
+# - off-cluster: Use registry outside the Kubernetes cluster (example: dockerhub,registry.cn-hangzhou.aliyuncs.com,self-hosted)
 # - ecr: Use Amazon's ECR
 # - gcr: Use Google's GCR
 registry_location = "on-cluster"
@@ -66,7 +66,7 @@ key_json = ''''''
 hostname = ""
 
 [minio]
-org = "deis"
+org = "tryk8s"
 pullPolicy = "IfNotPresent"
 dockerTag = "v2.2.0"
 
@@ -109,32 +109,32 @@ database_container = "your-database-container-name"
 builder_container = "your-builder-container-name"
 
 [builder]
-org = "deis"
+org = "tryk8s"
 pullPolicy = "IfNotPresent"
 dockerTag = "v2.3.0"
 
 [slugbuilder]
-org = "deis"
+org = "tryk8s"
 pullPolicy = "IfNotPresent"
 dockerTag = "v2.3.0"
 
 [dockerbuilder]
-org = "deis"
+org = "tryk8s"
 pullPolicy = "IfNotPresent"
 dockerTag = "v2.3.0"
 
 [controller]
-org = "deis"
+org = "tryk8s"
 pullPolicy = "IfNotPresent"
 dockerTag = "v2.3.1"
 
 [slugrunner]
-org = "deis"
+org = "tryk8s"
 pullPolicy = "IfNotPresent"
 dockerTag = "v2.2.0"
 
 [database]
-org = "deis"
+org = "tryk8s"
 pullPolicy = "IfNotPresent"
 dockerTag = "v2.2.1"
 # Configure the following ONLY if using an off-cluster PostgreSQL database
@@ -145,12 +145,12 @@ host = "database host"
 port = "database port"
 
 [registry]
-org = "deis"
+org = "tryk8s"
 pullPolicy = "IfNotPresent"
 dockerTag = "v2.2.0"
 
 [registry_token_refresher]
-org = "deis"
+org = "tryk8s"
 pullPolicy = "Always"
 dockerTag = "v1.0.0"
 # Prefix for the imagepull secret created when using private registry
@@ -160,25 +160,25 @@ secretPrefix = "private-registry"
 tokenRefreshTime = ""
 
 [registry_proxy]
-org = "deis"
+org = "tryk8s"
 pullPolicy = "IfNotPresent"
 dockerTag = "v1.0.0"
 hostPort = 5555
 
 [workflowManager]
-org = "deis"
+org = "tryk8s"
 pullPolicy = "IfNotPresent"
 dockerTag = "v2.3.1"
 versionsApiURL = "https://versions.deis.com"
 doctorApiURL = "https://doctor.deis.com"
 
 [logger]
-org = "deis"
+org = "tryk8s"
 pullPolicy = "IfNotPresent"
 dockerTag = "v2.2.0"
 
 [loggerRedis]
-org = "deis"
+org = "tryk8s"
 pullPolicy = "IfNotPresent"
 dockerTag = "v2.2.0"
 # Configure the following ONLY if using an off-cluster Redis instance for logger
@@ -188,32 +188,32 @@ port = "redis port"
 password = "redis password" # "" == no password
 
 [router]
-org = "deis"
+org = "tryk8s"
 pullPolicy = "IfNotPresent"
 dockerTag = "v2.3.0"
 platformDomain = ""
 
 [fluentd]
-org = "deis"
+org = "tryk8s"
 pullPolicy = "IfNotPresent"
 dockerTag = "v2.2.0"
 
 [grafana]
-org = "deis"
+org = "tryk8s"
 pullPolicy = "IfNotPresent"
 dockerTag = "v2.2.0"
 
 [influxdb]
-org = "deis"
+org = "tryk8s"
 pullPolicy = "IfNotPresent"
 dockerTag = "v2.2.0"
 
 [telegraf]
-org = "deis"
+org = "tryk8s"
 pullPolicy = "IfNotPresent"
 dockerTag = "v2.2.0"
 
 [nsqd]
-org = "deis"
+org = "tryk8s"
 pullPolicy = "IfNotPresent"
 dockerTag = "v2.2.0"

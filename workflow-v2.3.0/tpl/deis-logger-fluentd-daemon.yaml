@@ -21,7 +21,7 @@ spec:
       serviceAccount: deis-logger-fluentd
       containers:
       - name: deis-logger-fluentd
-        image: quay.io/{{ .fluentd.org }}/fluentd:{{env "FLUENTD_GIT_TAG" | default .fluentd.dockerTag}}
+        image: registry.cn-hangzhou.aliyuncs.com/{{ .fluentd.org }}/deis-fluentd:{{env "FLUENTD_GIT_TAG" | default .fluentd.dockerTag}}
         imagePullPolicy: {{.fluentd.pullPolicy}}
         volumeMounts:
         - name: varlog

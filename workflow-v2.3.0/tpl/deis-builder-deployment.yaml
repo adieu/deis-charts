@@ -26,7 +26,7 @@ spec:
       serviceAccount: deis-builder
       containers:
         - name: deis-builder
-          image: quay.io/{{.builder.org}}/builder:{{ env "BUILDER_GIT_TAG" | default .builder.dockerTag}}
+          image: registry.cn-hangzhou.aliyuncs.com/{{.builder.org}}/deis-builder:{{ env "BUILDER_GIT_TAG" | default .builder.dockerTag}}
           imagePullPolicy: {{.builder.pullPolicy}}
           ports:
             - containerPort: 2223
@@ -53,9 +53,9 @@ spec:
             - name: "GIT_LOCK_TIMEOUT"
               value: "10"
             - name: "SLUGBUILDER_IMAGE_NAME"
-              value: "quay.io/{{.slugbuilder.org}}/slugbuilder:{{ env "SLUGBUILDER_GIT_TAG" | default .slugbuilder.dockerTag }}"
+              value: "registry.cn-hangzhou.aliyuncs.com/{{.slugbuilder.org}}/deis-slugbuilder:{{ env "SLUGBUILDER_GIT_TAG" | default .slugbuilder.dockerTag }}"
             - name: "DOCKERBUILDER_IMAGE_NAME"
-              value: "quay.io/{{.dockerbuilder.org}}/dockerbuilder:{{ env "DOCKERBUILDER_GIT_TAG" | default .dockerbuilder.dockerTag}}"
+              value: "registry.cn-hangzhou.aliyuncs.com/{{.dockerbuilder.org}}/deis-dockerbuilder:{{ env "DOCKERBUILDER_GIT_TAG" | default .dockerbuilder.dockerTag}}"
             # This var needs to be passed so that the minio client (https://github.com/minio/mc) will work in Alpine linux
             - name: "DOCKERIMAGE"
               value: "1"

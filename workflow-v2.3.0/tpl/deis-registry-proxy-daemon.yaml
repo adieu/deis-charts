@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: deis-registry-proxy
-        image: quay.io/{{.registry_proxy.org}}/registry-proxy:{{env "REGISTRY_PROXY_GIT_TAG" | default .registry_proxy.dockerTag}}
+        image: registry.cn-hangzhou.aliyuncs.com/{{.registry_proxy.org}}/deis-registry-proxy:{{env "REGISTRY_PROXY_GIT_TAG" | default .registry_proxy.dockerTag}}
         imagePullPolicy: {{.registry_proxy.pullPolicy}}
         resources:
           limits:
